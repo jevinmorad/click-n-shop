@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Layout from "./components/Layout";
 
@@ -6,7 +6,10 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Layout/>} />
+        <Route path="/" element={<Layout />}>
+          {/* Add more routes here */}
+          
+        </Route>
       </Routes>
     </Router>
   );
