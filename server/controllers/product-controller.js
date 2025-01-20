@@ -1,5 +1,5 @@
 const asyncHandler = require('express-async-handler');
-const Product = require('../models/ProductDetail');
+const Product = require('../models/Product');
 
 // Get all products
 const getAll = asyncHandler(async (req, res) => {
@@ -21,7 +21,7 @@ const getById = asyncHandler(async (req, res) => {
 }) 
 
 // Add a new product
-const addProductDetail = asyncHandler(async (req, res) => {
+const addProduct = asyncHandler(async (req, res) => {
     const product = new Product(req.body);
 
     const savedProduct = await product.save();
@@ -34,7 +34,7 @@ const addProductDetail = asyncHandler(async (req, res) => {
 })
 
 // Update an existing product
-const updateProductDetail = asyncHandler(async (req, res) => {
+const updateProduct = asyncHandler(async (req, res) => {
     const { id } = req.params;
     const product = await Product.findById(id);
 
@@ -50,7 +50,7 @@ const updateProductDetail = asyncHandler(async (req, res) => {
 })
 
 // Delete a product
-const deleteProductDetail = asyncHandler(async (req, res) => {
+const deleteProduct = asyncHandler(async (req, res) => {
     const { id } = req.params;
     const product = await Product.findByIdAndDelete(id);
 
@@ -65,7 +65,7 @@ const deleteProductDetail = asyncHandler(async (req, res) => {
 module.exports = {
     getAll,
     getById,
-    addProductDetail,
-    updateProductDetail,
-    deleteProductDetail,
+    addProduct,
+    updateProduct,
+    deleteProduct,
 }

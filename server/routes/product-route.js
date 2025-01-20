@@ -1,17 +1,17 @@
 const express = require('express');
 const mongoose = require('mongoose');
-const { getall, getById, addProductDetail, updateProductDetail, deleteProductDetail } = require('../controllers/product-controller');
+const { getAll, getById, addProduct, updateProduct, deleteProduct, } = require('../controllers/product-controller');
 
 const route = express.Router();
 
-route.get('/', getall)
+route.get('/', getAll)
 
-route.get('/:id',  getById)
+route.get('/:id', getById)
 
-route.post('/', addProductDetail)
+route.post('/', addProduct)
 
-route.patch('/:id',  updateProductDetail)
+route.patch('/:id', updateProduct)
 
-route.delete('/:id',deleteProductDetail)
+route.delete('/:id', deleteProduct)
 
 module.exports = route;
