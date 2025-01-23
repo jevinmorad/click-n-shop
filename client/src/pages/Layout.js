@@ -10,9 +10,9 @@ export default function Layout() {
             <main className="px-14">
                 <Outlet />
             </main>
-            <footer className="bg-gray-300">
+            {/* <footer className="bg-gray-300">
                 <p>&copy; 2021</p>
-            </footer>
+            </footer> */}
         </>
     )
 }
