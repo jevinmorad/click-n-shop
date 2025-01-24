@@ -8,9 +8,7 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<Layout />}>
-          <Route path="/hp" element={<HomePage />}/>
-          {/* Add more routes here */}
-          
+          <Route path="/" element={<HomePage />} />
         </Route>
       </Routes>
     </Router>
